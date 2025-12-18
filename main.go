@@ -30,6 +30,7 @@ func main() {
 			return d.DialContext(ctx, "udp", dnsAddrPort.String())
 		},
 	}
+	log.Printf("using %v to resolve domains\n", dnsAddrPort)
 
 	cert, err := loadCert()
 	if err != nil {
